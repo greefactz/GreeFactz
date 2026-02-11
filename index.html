@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- =========================
-       SEO & META
-  ========================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Official portfolio of Ali Sher Lodhi – Professional YouTuber, TikToker, and Digital Content Creator." />
@@ -11,29 +8,19 @@
   <meta name="author" content="Ali Sher Lodhi" />
   <title>Ali Sher Lodhi | YouTuber & Content Creator</title>
 
-  <!-- =========================
-       STYLES
-  ========================== -->
   <style>
     :root {
       --bg-main: #0b0f14;
       --bg-card: #121824;
-      --accent: #3da9fc;
-      --accent-soft: rgba(61, 169, 252, 0.15);
+      --accent: #ff7a00;
+      --accent-soft: rgba(255, 122, 0, 0.15);
       --text-main: #e6e8eb;
       --text-muted: #aab0bb;
       --border-soft: rgba(255,255,255,0.08);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
@@ -42,23 +29,10 @@
       line-height: 1.7;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
+    section { padding: 80px 6%; }
+    .container { max-width: 1100px; margin: auto; }
 
-    section {
-      padding: 80px 6%;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    /* =========================
-       NAV
-    ========================== */
     nav {
       position: fixed;
       top: 0;
@@ -78,10 +52,7 @@
       align-items: center;
     }
 
-    .logo {
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
+    .logo { font-weight: 700; letter-spacing: 1px; }
 
     .nav-links a {
       margin-left: 20px;
@@ -90,13 +61,8 @@
       transition: color 0.3s;
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
-    }
+    .nav-links a:hover { color: var(--accent); }
 
-    /* =========================
-       HERO
-    ========================== */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -104,17 +70,8 @@
       padding-top: 120px;
     }
 
-    .hero h1 {
-      font-size: clamp(2.4rem, 5vw, 3.5rem);
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-size: 1rem;
-      color: var(--accent);
-      font-weight: 450;
-      margin-bottom: 20px;
-    }
+    .hero h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); margin-bottom: 10px; }
+    .hero h2 { font-size: 1rem; color: var(--accent); font-weight: 450; margin-bottom: 20px; }
 
     .tagline {
       color: var(--text-muted);
@@ -145,6 +102,9 @@
     .btn-outline {
       border: 1px solid var(--border-soft);
       color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .btn-outline:hover {
@@ -152,23 +112,13 @@
       color: var(--accent);
     }
 
-    /* =========================
-       SECTION HEADERS
-    ========================== */
-    .section-title {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
+    .section-title { font-size: 1.8rem; margin-bottom: 15px; }
     .section-subtitle {
       color: var(--text-muted);
       margin-bottom: 40px;
       max-width: 700px;
     }
 
-    /* =========================
-       CARDS
-    ========================== */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -188,33 +138,19 @@
       box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     }
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.1rem;
-    }
+    .card h3 { margin-bottom: 10px; font-size: 1.1rem; }
+    .card p { color: var(--text-muted); font-size: 0.95rem; }
 
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* =========================
-       SOCIAL LINKS
-    ========================== */
     .social-links a {
       display: inline-block;
       margin-right: 15px;
-      font-size: 0.95rem;
-      color: var(--accent);
     }
 
-    .social-links a:hover {
-      text-decoration: underline;
+    .social-links img {
+      width: 28px;
+      height: 28px;
     }
 
-    /* =========================
-       CONTACT
-    ========================== */
     .contact-box {
       background: linear-gradient(180deg, #0f1625, #0b101b);
       border: 1px solid var(--border-soft);
@@ -222,17 +158,9 @@
       padding: 35px;
     }
 
-    .contact-item {
-      margin-bottom: 12px;
-    }
+    .contact-item { margin-bottom: 12px; }
+    .contact-item span { color: var(--text-muted); }
 
-    .contact-item span {
-      color: var(--text-muted);
-    }
-
-    /* =========================
-       FOOTER
-    ========================== */
     footer {
       padding: 30px 6%;
       text-align: center;
@@ -241,9 +169,6 @@
       border-top: 1px solid var(--border-soft);
     }
 
-    /* =========================
-       ANIMATIONS
-    ========================== */
     .reveal {
       opacity: 0;
       transform: translateY(30px);
@@ -255,157 +180,92 @@
       transform: translateY(0);
     }
 
-    /* =========================
-       RESPONSIVE
-    ========================== */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-      section {
-        padding: 70px 7%;
-      }
+      .nav-links { display: none; }
+      section { padding: 70px 7%; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       NAV
-  ========================== -->
-  <nav>
-    <div class="nav-inner">
-      <div class="logo">ALI SHER LODHI</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#work">What I Do</a>
-        <a href="#social">Social</a>
-        <a href="#contact">Contact</a>
+<nav>
+  <div class="nav-inner">
+    <div class="logo">ALI SHER LODHI</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">What I Do</a>
+      <a href="#social">Social</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container reveal">
+    <h1>Ali Sher Lodhi</h1>
+    <h2>YouTuber & Digital Content Creator</h2>
+    <p class="tagline">
+      Creating engaging, entertaining, and impactful digital content that connects with audiences and builds a powerful online presence.
+    </p>
+    <div class="cta-buttons">
+      <a href="#contact" class="btn-primary">Get In Touch</a>
+      <a href="https://www.youtube.com/channel/UCBl9Mgs6CmQaQGYjDLYhv9g" target="_blank" class="btn-outline">View YouTube</a>
+      <a href="/honey" target="_blank" class="btn-outline">Other Collaborator HONEY</a>
+    </div>
+  </div>
+</section>
+
+<section id="social">
+  <div class="container reveal">
+    <h2 class="section-title">Social Media</h2>
+    <p class="section-subtitle">Follow and connect with me across platforms.</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/ali_sher_lodhi" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+      <a href="https://www.youtube.com/channel/UCBl9Mgs6CmQaQGYjDLYhv9g" target="_blank">YouTube – Gree Factz</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container reveal">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle">Let’s collaborate or connect professionally.</p>
+
+    <div class="contact-box">
+      <div class="contact-item"><span>Email:</span> alisherlodhipk@gmail.com</div>
+      <div class="contact-item"><span>Call / WhatsApp:</span> +92 317 4333068</div>
+      <div class="contact-item">
+        <a href="https://wa.me/923174333068" target="_blank" class="btn-outline">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+               alt="WhatsApp" 
+               style="width:28px; height:28px;">
+        </a>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- =========================
-       HERO
-  ========================== -->
-  <section class="hero">
-    <div class="container reveal">
-      <h1>Ali Sher Lodhi</h1>
-      <h2>YouTuber & Digital Content Creator</h2>
-      <p class="tagline">
-        Creating engaging, entertaining, and impactful digital content that connects with audiences and builds a powerful online presence.
-      </p>
-      <div class="cta-buttons">
-        <a href="#contact" class="btn-primary">Get In Touch</a>
-        <a href="https://www.youtube.com/channel/UCBl9Mgs6CmQaQGYjDLYhv9g" target="_blank" class="btn-outline">View YouTube</a>
-        <a href="/honey" target="_blank" class="btn-outline">Other Collaborator HONEY</a>
-      </div>
-    </div>
-  </section>
+<footer>
+  © <span id="year"></span> Ali Sher Lodhi. All Rights Reserved.
+</footer>
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
-  <section id="about">
-    <div class="container reveal">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">
-        I am a passionate YouTuber and digital content creator focused on delivering high-quality, engaging, and memorable content for a diverse online audience.
-      </p>
-      <p>
-        Through creativity, consistency, and a deep understanding of digital trends, I produce content that entertains while leaving a lasting impression.
-        My work is driven by originality, dedication, and continuous improvement, allowing me to grow as a creator and build an authentic connection
-        with my audience across multiple platforms.
-      </p>
-    </div>
-  </section>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-  <!-- =========================
-       WHAT I DO
-  ========================== -->
-  <section id="work">
-    <div class="container reveal">
-      <h2 class="section-title">What I Do</h2>
-      <p class="section-subtitle">
-        I focus on creative digital entertainment and influence through multiple platforms.
-      </p>
+  const reveals = document.querySelectorAll(".reveal");
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, { threshold: 0.15 });
 
-      <div class="grid">
-        <div class="card">
-          <h3>🎥 Video Content Creation</h3>
-          <p>Producing engaging and entertaining videos tailored for modern digital audiences.</p>
-        </div>
-        <div class="card">
-          <h3>📱 Social Media Influence</h3>
-          <p>Building authentic connections and growing communities across social platforms.</p>
-        </div>
-        <div class="card">
-          <h3>🚀 Brand Growth</h3>
-          <p>Developing a strong personal brand through consistency, creativity, and strategy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
-       SOCIAL
-  ========================== -->
-  <section id="social">
-    <div class="container reveal">
-      <h2 class="section-title">Social Media</h2>
-      <p class="section-subtitle">Follow and connect with me across platforms.</p>
-      <div class="social-links">
-        <a href="https://www.instagram.com/ali_sher_lodhi" target="_blank">Instagram</a>
-        <a href="https://www.youtube.com/channel/UCBl9Mgs6CmQaQGYjDLYhv9g" target="_blank">YouTube – Gree Factz</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
-       CONTACT
-  ========================== -->
-  <section id="contact">
-    <div class="container reveal">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">Let’s collaborate or connect professionally.</p>
-
-      <div class="contact-box">
-        <div class="contact-item"><span>Email:</span> alisherlodhipk@gmail.com</div>
-        <div class="contact-item"><span>Call / WhatsApp:</span> +92 317 4333068</div>
-        <div class="contact-item">
-          <a href="https://wa.me/923174333068" target="_blank" class="btn-outline">Message on WhatsApp</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer>
-    © <span id="year"></span> Ali Sher Lodhi. All Rights Reserved.
-  </footer>
-
-  <!-- =========================
-       SCRIPT
-  ========================== -->
-  <script>
-    // Auto year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Reveal on scroll
-    const reveals = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    }, { threshold: 0.15 });
-
-    reveals.forEach(r => observer.observe(r));
-  </script>
+  reveals.forEach(r => observer.observe(r));
+</script>
 
 </body>
 </html>
